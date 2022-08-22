@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="tablereserve.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="div-disp">
+			<div class="div6">
+				<h3 class="h-book">BOOK YOUR TABLE</h3>
+				<h6 class="h-book">Note: Each table costs ₦50,000</h6>
+				<input
+					class="input-book"
+					placeholder="Name"
+					type="text"
+					name=""
+					id="input1"
+				/>
+				<input
+					class="input-book"
+					placeholder="Email"
+					type="text"
+					name=""
+					id="input2"
+				/>
+				<input
+					class="input-book"
+					placeholder="Phone"
+					type="text"
+					name=""
+					id="input3"
+				/>
+				<select  name="" id="input4">
+					<option id="input4" value="Table-Reservation">
+						Table-Reservation
+					</option>
+
+					<option id="input5" value="Table(1) (2seat)">Table(1)  (2seats) </option>
+					<option id="input5" value="Table(1) (4seat)">Table(1)  (4seats) </option>
+					<option id="input5" value="Table(2) (2seat)">Table(2)  (2seats) </option>
+					<option id="input5" value="Table(2) (4seat)">Table(2)  (4seats) </option>
+					<option id="input5" value="Table(3) (2seat)">Table(3)  (2seats) </option>
+					<option id="input5" value="Table(3) (4seat)">Table(3)  (4seats) </option>
+					<option id="input5" value="Table(4) (2seat)">Table(4)  (2seats) </option>
+					<option id="input5" value="Table(4) (4seat)">Table(4)  (4seats) </option>
+					<option id="input5" value="Table(5) (2seat)">Table(5)  (2seats)</option>
+					<option id="input5" value="Table(5) (4seat)">Table(5)  (4seats)</option>
+					<option id="input5" value="Table(6) (2seat)">Table(6)  (2seats) </option>
+					<option id="input5" value="Table(6) (4seat)">Table(6)  (4seats)</option>
+					<option id="input5" value="Table(7) (2seat)">Table(7)  (2seats)</option>
+					<option id="input5" value="Table(7) (4seat)">Table(7)  (4seats)</option>
+					<option id="input5" value="Table(8) (2seat)">Table(8)  (2seat)</option>
+					<option id="input5" value="Table(8) (4seat)">Table(8)  (4seats)</option>
+					<option id="input5" value="Table(9) (2seat)">Table(9)  (2seats)</option>
+					<option id="input5" value="Table(9) (4seat)">Table(9)  (4seats)</option>
+					<option id="input5" value="Table(10)(2seat)">Table(10)(4seats)</option>
+					<option id="input5" value="Table(10)(4seat)">Table(10)(4seats)</option>
+
+				</select>
+				<input
+					class="input-book"
+					placeholder="Time"
+					type="time"
+					name=""
+					id="input10"
+				/>
+				<input
+					class="input-book"
+					placeholder="Guest"
+					type="date"
+					name=""
+					id="input6"
+				/>
+				<button
+					onclick="booktable()"
+					class="booktable"
+					data-toggle="modal"
+					data-target="#exampleModalLong"
+				>
+					Book Table Now
+				</button>
+
+				<!-- Modal -->
+				<div 
+					class="modal fade"
+					id="exampleModalLong"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="exampleModalLongTitle"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">
+									THANK YOU FOR YOUR RESERVATION
+								</h5>
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"
+								>
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div id="modal-fan"></div>
+							</div>
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-secondary"
+									data-dismiss="modal"
+								>
+									Close
+								</button>
+								<a href="C:\Users\Hp\Desktop\Main project\signup\tablepay.html"><button type="button" class="btn btn-primary">
+									Proceed to payment
+								</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="div-p">
+				<h1 class="h1-welcome">WELCOME TO <br />DAWANTY</h1>
+				<p class="p-1">
+					I must explain to you how all this mistaken idea <br />
+					of denouncing pleasure and praising pain was born <br />
+					and I will give you a complete account of the system, <br />
+					and expound the actual teachings of the great explorer <br />
+					of the truth, the master-builder of human happiness. <br />
+					No one rejects, dislikes, or avoids pleasure itself, <br />
+					because it is pleasure, but because those who do not <br />
+					know how to pursue pleasure rationally encounter <br />
+					consequences that are extremely painful. of human <br />
+					happiness. No one rejects, dislikes, or avoids pleasure itself
+				</p>
+			</div>
+			<div>
+				<img class="img-div" src="../image/CHEFQ.webp" alt="" />
+			</div>
+		</div>
+
+		<div id="table-reserve">
+			<!-- <button class="btna"></button><button class="btna"></button><button class="btna"></button><button
+            class="btna"></button><button class="btna"></button><button class="btna"></button><button
+            class="btna"></button><button class="btna"></button><button class="btna"></button><button
+            class="btna"></button> -->
+		</div>
+		<div id="tableon">
+			
+		</div>
+
+		
+					
+		
+	</body>
+</html>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+	let arraytable = [];
+	let modal = document.getElementById("modal-fan");
+	let input = document.getElementById("input1");
+	let email = document.getElementById("input2");
+	let phone = document.getElementById("input3");
+	let table = document.getElementById("input5")
+	let select = document.getElementById("input4");
+	let time = document.getElementById("input10");
+	let date = document.getElementById("input6");
+
+	
+   
+	function booktable() {	
+		if(arraytable.indexOf(select.value) >= 0){
+			return alert("seat already picked")
+			
+		}
+		
+		document.getElementById(
+			"modal-fan"
+		).innerHTML = `   <p id="name-client">Name:   ${input.value}</p>
+            <p id="name-client">Email: ${email.value}</p>
+            <p id="name-client">Phone no: ${phone.value}</p>
+            <p id="name-client">Table: ${select.value}</p>
+            <p id="name-client">Time: ${time.value}AM</p>
+            <p id="name-client">Date: ${date.value}</p>
+            <p id="name-clien">Reservation code: ${Math.floor(
+							Math.random() * 10000
+						)}</p>`;
+		let reserve = document.getElementById("name-clien")
+		localStorage.setItem("surname", JSON.stringify(input.value));
+		localStorage.setItem("email", JSON.stringify(email.value));
+		localStorage.setItem("table", JSON.stringify(select.value));
+		localStorage.setItem("reserve", JSON.stringify(reserve.innerHTML));
+		
+		console.log(arraytable);
+		arraytable.push(select.value)
+		localStorage.setItem("arraytable", JSON.stringify(arraytable))
+		//  arraytable.push(select.value)
+		// localStorage.setItem("arraytable", JSON.stringify(arraytable));
+		// // console.log(indexOf(select.value))
+		//  if(select.value = tableset.indexOf(select.value) ){
+        // alert(" This table is no longer available")
+		
+
+		
+
+		
+		
+
+
+		input.value = "";
+		email.value = "";
+		phone.value = "";
+		select.value = "";
+		time.value = "";
+		date.value = "";
+		
+	}
+
+	console.log();
+	function prond(){
+    let add = JSON.parse(localStorage.getItem("arraytable"));
+	if(add) arraytable = add
+	
+	 console.log(arraytable)
+	}
+	prond()
+
+	const paymentForm = document.getElementById("paymentForm");
+	paymentForm.addEventListener("submit", payWithPaystack, false);
+	function payWithPaystack(event) {
+		event.preventDefault();
+
+		let handler = PaystackPop.setup({
+			key: "pk_test_b4d261ff0228a40dc7d59e4ad79faf91b77bb00a", // Replace with your public key
+			email: document.getElementById("email-address").value,
+			amount: document.getElementById("amount").value * 100,
+			ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+			// label: "Optional string that replaces customer email"
+			onClose: function () {
+				alert("Window closed.");
+			},
+			callback: function (response) {
+				let message = "Payment complete! Reference: " + response.reference;
+				alert(message);
+			},
+		});
+
+		handler.openIframe();
+	}
+</script>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta charset="UTF-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<script
+			crossorigin="anonymous"
+			src="https://kit.fontawesome.com/my-kit-number.js"
+		></script>
+		<link
+			crossorigin="anonymous"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			rel="stylesheet"
+		/>
+		<script
+			crossorigin="anonymous"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		></script>
+		<script
+			crossorigin="anonymous"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		></script>
+		<script
+			crossorigin="anonymous"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		></script>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<title>Food page</title>
+		<link href="Foodd (1).css" rel="stylesheet" />
+		<style>
+			.showNav {
+				display: flex;
+				flex-direction: column;
+				height: 95%;
+				justify-content: flex-start;
+				width: 98%;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="nav-section">
+			<nav class="nav">
+				<div class="h1a">
+					<h5>DAWNTY</h5>
+					<button id="navbar_toggle">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+				<ul class="divSpan">
+					<!--            <div class = "div-span1" >-->
+					<li>
+						<a class="nav_links" href="">HOME</a>
+					</li>
+					<li>
+						<a
+							class="nav_links"
+							href="C:\Users\Hp\Desktop\Main project\landing\landingpage.html"
+							>ABOUT US</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav_links"
+							href="C:\Users\Hp\Desktop\Main project\landing\landingpage.html"
+							>GALLERY</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav_links"
+							href="C:\Users\Hp\Desktop\Main project\landing\landingpage.html"
+							>CONTACT US</a
+						>
+					</li>
+					<!--            </div >-->
+
+					<li class="button-section">
+						<ul class="div-design">
+							<li>
+								<button onclick="buttonn()" class="button-down">LOG OUT</button>
+							</li>
+							<li>
+								<button onclick="buttond()" class="button-down">LOG IN</button>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="first-text">
+				<h1 class="h1b">
+					WELCOME TO <br />
+					DAWNTY RESTAURANT & LOUNGE
+				</h1>
+				<div class="aaa">
+					<button onclick="reserve()" class="btn1">RESERVATION NOW</button>
+				</div>
+			</div>
+			
+		</section>
+
+		<main class="main">
+			<div class="main-div1">
+				<div class="div-h1">
+					<h1 class="h1-specialty">OUR SPECIALITIES</h1>
+				</div>
+
+				<div class="div-catel">
+					<button class="button-category" onclick="getimage()">ALL</button>
+					<button class="button-category" onclick="foodType('dinner')">
+						DINNER
+					</button>
+					<button class="button-category" onclick="foodType('breakfast')">
+						BREAKFAST
+					</button>
+					<button class="button-category" onclick="foodType('african')">
+						AFRICAN
+					</button>
+					<button class="button-category" onclick="cartpage()">
+						Cart <span id="display">0</span>
+					</button>
+				</div>
+
+				<div class="card-row" id="row"></div>
+			</div>
+
+			<div class="div-about">
+				<div class="footer-down">
+					<h3 class="footer-color">DAWNTY</h3>
+					<h5>CONTACT US</h5>
+					<div>
+						<p class="button-footer">Call</p>
+						<p class="footer-p">+248139336457</p>
+					</div>
+					<div class="foot">
+						<p id="fonnt">Mail</p>
+						<span class="footer-colour">damven@gmail.com </span>
+					</div>
+				</div>
+				<div class="footer2">
+					<h4>USEFUL LINKS</h4>
+					<div class="footerbb">
+						<a href=""><p>About us</p></a>
+						<a href=""><p>Our special menu</p></a>
+						<a href=""><p>Contacts</p></a>
+						<a href=""><p>Booking table</p></a>
+						<a href=""><p>Latest news</p></a>
+						<a href=""><p>Terms & conditions</p></a>
+						<a href=""><p>Cookie policy</p></a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
+
+<script src="./cart/cart.js"></script>
+<script src="./foodd.js"></script>

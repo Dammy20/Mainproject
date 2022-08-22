@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #and{
+            border: 1px solid; border-radius: 50px;
+             width: 60px; height: 40px; background-color: red;
+        }
+        #bad{
+            border: 1px solid; border-radius: 50px;
+             width: 60px; height: 40px; background-color: yellow;
+        }
+        #vad{
+            border: 1px solid; border-radius: 50px;
+         width: 60px; height: 40px; background-color: green;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="time">
+
+    </div>
+    <div id="and"></div>
+    <button id="btn" onclick="change()">Change color</button>  
+    
+</body>
+</html>
+<script>
+    let bright = ["red", "green", "yellow"]
+    let index = 0;
+    let and = document.getElementById("and");
+    
+    function change(){
+        index++;
+        and.style.backgroundColor = bright[index];
+        if(index >= bright.length -1){
+            index = -1;  
+            
+        }
+        console.log(index)
+    }
+   
+    // let and = document.getElementById("and")
+    // bright = "red"
+    
+    //    function change(){
+    //      if(bright == "red"){
+    //         and.style.backgroundColor = "yellow"
+    //         bright = "yellow"
+    //         console.log(bright)
+    //      }else if (bright = "yellow"){
+    //         and.style.backgroundColor = "green"
+    //         bright = "green"
+    //         console.log(bright)
+    //      }else{
+    //         and.style.backgroundColor = "red"
+    //      }
+            
+    //      }
+           
+         
+
+    
+    // const btn = document.getElementById('btn');
+    // btn.addEventListener('click', function onClick(event){
+    //     and.style.backgroundColor = "green" })
+    // btn.addEventListener('click', function onclick(event){
+    //     and.style.backgroundColor = "yellow"
+    // })
+
+//    let today = new Date();
+//    let gethours = today.getHours
+//    let getmin = today.getMinutes
+//    let getsec = today.getSeconds
+
+// let mytime = setInterval(timmer, {
+    
+// }, 1000);
+// function timmer(){
+//     let daye = new Date()
+//     document.getElementById("time").innerHTML= daye.toLocaleTimeString()
+
+    
+
+// }
+// timmer()
+
+    
+
+</script>

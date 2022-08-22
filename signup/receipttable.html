@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="receipt.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="receipt" class="receipt-div">
+        
+        <h4 class="h4-rest">RESTAURANT DAWANTY</h4>
+        <h5 class="com-h2">The Company Name inc. <br>9870 St vincent Place Lekki</h5>
+        <h3 class="Cash"> RECEIPT FOR TABLE RESERVATION</h3>
+        <div class="div-space">
+            <h2  class="received">Received by:  </h2>
+            <h2 id="receipt-in" > </h2>
+            <hr class="hr1">
+            <h2 >Amount Paid: ₦  </h2>
+            <h2 id="receipt-inn" > </h2>
+            <hr class="hr1">
+             <h2 > Table Reserved:  </h2>
+            <h2 id="receipt-out" > </h2>
+            <hr class="hr1">
+              <h2 > Reservation:  </h2>
+            <h2 id="receipt-on" > </h2>
+            <hr class="hr1">
+            
+
+           <div>
+            <img id="imgg" src="" alt="" class="codee">
+        </div>
+                <h4 class="h2-div">Note: Please ensure you bring this slip along</h4>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    let codee = document.querySelector('.codee')
+
+    function add(){
+    let pear =JSON.parse(localStorage.getItem("surname"));
+    document.getElementById("receipt-in").innerHTML += pear
+    let release =JSON.parse(localStorage.getItem("table"));
+    document.getElementById("receipt-out").innerHTML += release
+    let y = JSON.parse(localStorage.getItem("amount"));
+    document.getElementById("receipt-inn").innerHTML += y
+    let ayn = JSON.parse(localStorage.getItem("reserve"));
+    document.getElementById("receipt-on").innerHTML += ayn
+    
+
+
+
+	
+
+	
+
+    }
+    add()
+    function generatebarcode() {
+        let refre = Math.floor(Math.random() * 100)
+        let url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${refre}`
+
+        codee.src = url
+
+        
+    }
+generatebarcode()
+    
+</script>

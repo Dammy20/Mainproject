@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="tablepay.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- <div class="div-adjust"> -->
+		<div class="payment">
+			<h2 class="proceed">Proceed to payment</h2>
+			<h4 class="h4-methos">Method of payment</h4>
+			<div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+			<form id="paymentForm">
+				<div class="form-group">
+					<label id="ab" class="full" for="first-name">Full Name</label>
+					<input class="payment-in" readonly type="text" id="first-name" />
+				</div>
+				<div class="form-group">
+					<label  id="ab" for="email">Email Address</label>
+					<input class="payment-in" readonly type="email" id="email-address" required />
+				</div>
+				<div class="form-group">
+					<label  id="ab"  for="amount">Amount</label>
+					<input value=50000  class="payment-in" type="tel" id="amount" required />
+				</div>
+				<div class="form-group">
+					<label  id="ab" for="first-name">Name on Card</label>
+					<input class="payment-in" type="text" id="first-name" />
+				</div>
+				<div class="form-group">
+					<label  id="ab" for="last-name">Credit card number</label>
+					<input class="payment-in" type="text" id="last-name" />
+				</div>
+				<div class="form-group">
+					<label  id="ab" for="last-name">Exp Month</label>
+					<input class="payment-in" type="text" id="last-name" />
+				</div>
+				<div id="form" class="form-group">
+					<div class="div-last">
+						<label  id="ab" for="last-name">Exp Year</label>
+						<input class="cvv" type="text" id="last-name" />
+					</div>
+					<div class="div-last">
+						<label  id="ab" for="last-name">CVV</label>
+						<input class="cvv" type="text" id="last-name" />
+					</div>
+				</div>
+				<div class="form-submit">
+					<button  type="submit" class="payy" onclick="payWithPaystack(event)">
+						Pay
+					</button>
+					
+				</div>
+			</form>
+		</div>
+
+
+	</body>
+</html>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+	let fullname = document.getElementById("first-name")
+	let email = document.getElementById("email-address")
+	let amount = document.getElementById("amount")
+
+	
+	function produce(){
+         let users = JSON.parse(localStorage.getItem("surname"));
+		 document.getElementById("first-name").value = users
+		 let x = JSON.parse(localStorage.getItem("email"));
+		 document.getElementById("email-address").value = x
+		 
+	}
+	produce()
+    function adding(){
+      let sur =  JSON.parse(localStorage.getItem("surname"))
+        document.getElementById("first-name").value = sur
+        JSON.parse(localStorage.getItem("table"))
+
+    }
+    adding()
+	function product(){
+		console.log(fullname.value);
+		localStorage.setItem("name", JSON.stringify(fullname.value))
+		localStorage.setItem("amount", JSON.stringify(amount.value))
+	}
+	
+
+		const paymentForm = document.getElementById("paymentForm");
+	paymentForm.addEventListener("submit", payWithPaystack, false);
+	function payWithPaystack(event) {
+		event.preventDefault();
+
+		let handler = PaystackPop.setup({
+			key: "pk_test_b4d261ff0228a40dc7d59e4ad79faf91b77bb00a", // Replace with your public key
+			email: document.getElementById("email-address").value,
+			amount: document.getElementById("amount").value * 100,
+			ref: "" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+			// label: "Optional string that replaces customer email"
+			onClose: function () {
+				alert("Window closed.");
+			},
+			callback: function (response) {
+				let message = "Payment complete! Reference: " + response.reference;
+				alert(message);
+				window.location.href = 'receipttable.html'
+			},
+		});
+
+		handler.openIframe();
+		product()
+	}
+	
+	
+</script>

@@ -1,0 +1,95 @@
+.receipt-div{
+    width: 28%;
+    height: 37rem;
+    background-color: white;
+    box-shadow: 0 0 20px black;
+    margin: auto;
+    text-align: center;
+
+}
+
+.h4-rest{
+    font-weight: bold;
+    font-family: cursive;
+    
+}
+.codein{
+    width: 50px;
+    height: 40px;
+}
+.hr1{
+    width: 250px;
+    border: 2px solid;
+    margin-top: -17px;
+}
+.com-h2{
+    font-family: cursive;
+    margin-top: -20px;
+}
+.received{
+    margin-top: 10px;
+}
+#imgg{
+    width: 90px;
+    height: 80px;
+    margin-top: 20px;
+}
+#receipt-in{
+    font-family: cursive;
+    text-align: center;
+    font-size: 120%;
+    margin-top: -10px;
+    /* margin-left: 20px; */
+    /* padding-top: 10px; */
+}
+#receipt-inn{
+    font-family: cursive;
+    text-align: center;
+    font-size: 120%;
+     margin-top: -20px;
+    
+}
+.thank{
+    margin-top: -5px;
+    text-align: center;
+    font-size: 105%;
+}
+.thanks{
+    margin-top: -20px;
+    text-align: center;
+    font-size: 105%;
+}
+#receipt-on{
+    font-family: cursive;
+    text-align: center;
+    font-size: 120%;
+     margin-top: -20px;
+    
+}
+#receipt-no{
+    font-family: cursive;
+    text-align: center;
+    font-size: 120%;
+     margin-top: -10px;
+    
+}
+#receipt-out{
+    font-family: cursive;
+    text-align: center;
+    font-size: 120%;
+      margin-top: -20px;
+    
+}
+
+.h2-div{
+    text-align: center;
+    color: black;
+   
+}
+.cash{
+    text-align: center;
+    font-weight: 900;
+}
+body{
+    background-color: black;
+}

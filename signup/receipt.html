@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="receipt.css">
+    <title>Document</title>
+</head>
+<body>
+      <div id="receipt" class="receipt-div">
+        
+        <h4 class="h4-rest">RESTAURANT DAWANTY</h4>
+        <h5 class="com-h2">The Company Name inc. <br>9870 St vincent Place Lekki</h5>
+        <h3 class="Cash"> RECEIPT FOR DELIVERY</h3>
+        <div class="div-space">
+             <h2  class="received">Receipt no: </h2>
+            <h2 id="receipt-no" > </h2>
+             <hr class="hr1">
+            <h2  class="received">Received by:  </h2>
+            <h2 id="receipt-in" > </h2>
+            <hr class="hr1">
+            <h2 >Amount Paid: ₦  </h2>
+            <h2 id="receipt-inn" > </h2>
+            <hr class="hr1">
+             <h2 > Home Address:  </h2>
+            <h2 id="receipt-out" > </h2>
+            <hr class="hr1">
+              <h2 > Delivered by  </h2>
+            <h2 id="receipt-on" >Peter Andrew </h2>
+            <hr class="hr1">
+            
+
+           <div>
+            <img src="" alt="" class="codein">
+        </div>
+        
+        <h4 class="thank">Thank you for the patronage</h4>
+        <h4 class="thanks">We hope to serve you more</h4>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    let codee = document.querySelector('.codee')
+    let receiptno = document.getElementById("receipt-no")
+
+    function add(){
+    let appear =JSON.parse(localStorage.getItem("name"));
+    document.getElementById("receipt-in").innerHTML += appear
+    let amoun =JSON.parse(localStorage.getItem("sumup"));
+    document.getElementById("receipt-inn").innerHTML += amoun
+	let receive =JSON.parse(localStorage.getItem("address"));
+    document.getElementById("receipt-out").innerHTML += receive
+	receiptno.innerHTML = Math.floor(Math.random ()* 200000000 )
+
+	
+
+    }
+    add()
+    function generatebarcode() {
+        let refre = Math.floor(Math.random() * 100)
+        let url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${refre}`
+
+        codee.src = url
+
+        
+    }
+generatebarcode()
+    
+</script>

@@ -1,0 +1,91 @@
+.div-upload {
+	width: 360px;
+	height: 500px;
+	background-color: white;
+	box-shadow: 0 0 5px;
+	margin: auto;
+}
+.div-b {
+	background-color: black;
+}
+#file{
+	width: 80%;
+	height: 2.5rem;
+	margin-left: 30px;
+	border: 2px solid red;
+
+
+}
+
+.div-button {
+	background-color: red;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	width: 20%;
+	height: 3rem;
+	margin: 40%;
+	border: none;
+}
+#food {
+	width: 80%;
+	height: 2.5rem;
+	margin-left: 30px;
+	border: 2px solid red;
+}
+#image {
+	width: 80%;
+	height: 2.5rem;
+	margin-left: 30px;
+	border: 2px solid red;
+}
+#rating {
+	width: 80%;
+	height: 2.5rem;
+	margin-left: 30px;
+	border: 2px solid red;
+}
+.colour {
+	font-size: large;
+	font-weight: bold;
+}
+.div-h3 {
+	text-align: center;
+}
+.div-body {
+	width: 50%;
+	height: 50rem;
+	margin: auto;
+
+	border-radius: 10px;
+	background-color: white;
+}
+.div-upload label {
+	display: block;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.div-h2 {
+	text-align: center;
+	font-weight: 900;
+}
+.upload {
+	width: 100px;
+	height: 30px;
+	margin-left: 120px;
+}
+#image {
+	margin-right: 100px;
+}
+
+input {
+	width: 250px;
+	height: 30px;
+	margin-left: 30px;
+}
+.input-description {
+	width: 80%;
+	height: 10rem;
+	margin-left: 30px;
+	border: 2px solid red;
+}
