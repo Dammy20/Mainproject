@@ -124,9 +124,10 @@
 		if (user.password !== password.value) {
 			return alertMe("Invalid Username or Password");
 		} else {
-			location.replace("../landing/landingpage.html") 
+			location.replace("./index.html") 
 		}
 	}
+	
 
 	function alertMe(message) {
 		displayError.innerHTML += `

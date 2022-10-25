@@ -117,7 +117,7 @@
      }
      
      .div-about {
-          /*background-image: url(./image/rest.jpg);*/
+          /* background-image: url(./image/rest.jpg); */
           background-size: cover;
           /*color: white;*/
           column-gap: 40px;

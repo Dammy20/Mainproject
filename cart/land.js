@@ -8,7 +8,7 @@ let enter = document.getElementById("input-admin")
 let add = localStorage.setItem("code", JSON.stringify(code));
 function submit() {
 	if (enter.value == code) {
-		location.href = "../signup/upload.html"
+		location.href = "./upload.html"
 		enter.value = ''
 	} else {
 		alert('you are not an admin')
@@ -18,5 +18,5 @@ function submit() {
 	
 }
  function log(){
-    location.replace("../signin/signwe.html")
+    location.replace("./signwe.html")
   }

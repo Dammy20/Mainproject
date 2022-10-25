@@ -128,7 +128,7 @@
        if(!localStorage.getItem('users')){
         arrayToLS.push(obj)
         localStorage.setItem('users',JSON.stringify(arrayToLS))
-        return location.href = "../signin/signwe.html"
+        return location.href = "./signwe.html"
        }
        else{
         arrayToLS = JSON.parse(localStorage.getItem('users'))
@@ -141,7 +141,7 @@
             else{
                 arrayToLS.push(obj)
                 localStorage.setItem('users',JSON.stringify(arrayToLS))
-                return location.replace("../signin/signwe.html") 
+                return location.replace("./signwe.html") 
             }
        }
     }
